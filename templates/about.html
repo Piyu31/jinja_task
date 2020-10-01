@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title of my page</title>
+</head>
+<body>
+	
+	<h1>Hi!I am {{name}} </h1>
+	<h1> My number is {{number}}</h1><br>
+	<table border="1">
+		<thead>
+		<th>Fruits</th>
+		</thead>
+		<tbody>
+		{% for item in mylist %}
+      	<td style="display: block;">{{ item }}</td>
+      
+    	{% endfor %}
+    	</tbody>
+	</table>
+    <h2>dictionary values are</h2>
+	{% for a,b in mydict.items(): %}
+      <div style="display: inline;" >{{ a }}</div>:<div style="display: inline;" >{{ b }}</div>
+      <br>
+    {% endfor %}
+	<a href="/send/{{name}}/{{number}}/{{mylist}}/{{mydict}}"><br><strong>send-data-back</strong></a>
+
+</body>
+</html>
